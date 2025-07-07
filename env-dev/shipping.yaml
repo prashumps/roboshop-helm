@@ -7,10 +7,10 @@ configMap_data:
   DB_USER: root
   DB_PASS: RoboShop@1
 
-  db_job:
-    enabled: true
-    ext: sql
-    jobs:
-      - master-data
-      - schema
-      - app-user
+db_job:
+  enabled: true
+  ext: sql
+  jobs:
+    - master-data
+    - schema
+    - app-user
