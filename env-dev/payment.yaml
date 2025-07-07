@@ -1,2 +1,2 @@
-appNmae: payment
+appName: payment
 containerPort: 8080
