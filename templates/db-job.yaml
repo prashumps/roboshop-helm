@@ -9,7 +9,7 @@ spec:
   template:
     spec:
       initContainers:
-      {{- range .Values.db_job.intJobs }}
+      {{- range .Values.db_job.initJobs }}
       - name: {{ . }}
         image: public.ecr.aws/w8x4g9h7/roboshop-v3/schema-load
         env:
