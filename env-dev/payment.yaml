@@ -7,4 +7,12 @@ configMap_data:
   USER_PORT: "8080"
   AMQP_HOST: rabbitmq-dev.prashumps.online
   AMQP_USER: roboshop
-  AMQP_PASS: roboshop123
+  AMQP_PASS:
+
+resources:
+  requests:
+    memory: "64Mi"
+    cpu: "50m"
+  limits:
+    memory: "128Mi"
+    cpu: "100m"
