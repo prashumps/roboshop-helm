@@ -4,5 +4,5 @@ db_job:
 containerPort: 8080
 serviceType: ClusterIP
 
-minReplicas: 2
+minReplicas: 1
 maxReplicas: 10
