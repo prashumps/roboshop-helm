@@ -40,8 +40,8 @@ spec:
                 name: {{ .Values.appName }}
           resources:
             requests:
-              memory: {{ .Values.resources.requests.memory | quote }}
-              cpu: {{ .Values.resources.requests.cpu | quote }}
+              memory: { { .Values.resources.requests.memory | default "64Mi" | quote } }
+              cpu: { { .Values.resources.requests.cpu | default "30m" | quote } }
             limits:
-              memory: {{ .Values.resources.limits.memory | quote }}
-              cpu: {{ .Values.resources.limits.cpu | quote }}
+              memory: { { .Values.resources.limits.memory | default "128Mi" | quote } }
+              cpu: { { .Values.resources.limits.cpu | default "100m" | quote } }

@@ -7,10 +7,3 @@ serviceType: ClusterIP
 minReplicas: 2
 maxReplicas: 10
 
-resources:
-  requests:
-    memory: "64Mi"
-    cpu: "30m"
-  limits:
-    memory: "128Mi"
-    cpu: "100m"
