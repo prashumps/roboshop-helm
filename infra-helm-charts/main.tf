@@ -40,9 +40,9 @@ resource "helm_release" "external-secrets" {
 }
 
 resource "null_resource" "external-secrets-secret-store" {
-  triggers = {
-    always_run = timestamp()
-  }
+  # triggers = {
+  #   always_run = timestamp()
+  # }
 
   depends_on = [
     helm_release.external-secrets
@@ -90,4 +90,10 @@ resource "helm_release" "argocd" {
   chart      = "argo-cd"
   namespace  = "argocd"
   create_namespace = true
+  set = [
+    {
+      name  = "server.service.type"
+      value = "LoadBalancer"
+    }
+  ]
 }
